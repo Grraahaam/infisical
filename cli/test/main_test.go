@@ -7,17 +7,18 @@ import (
 )
 
 func TestMain(m *testing.M) {
-    // Setup
+	// Setup
 	fmt.Println("Setting up CLI...")
 	SetupCli()
 	fmt.Println("Performing user login...")
 	UserLoginCmd()
 	fmt.Println("Performing infisical init...")
 	UserInitCmd()
+	fmt.Println("Running the tests...")
 
-    // Run the tests
-    code := m.Run()
+	// Run the tests
+	code := m.Run()
 
-    // Exit
-    os.Exit(code)
+	// Exit
+	os.Exit(code)
 }
